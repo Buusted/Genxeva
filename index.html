@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genxeva Perchance API Deployment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h3>Genxeva API Connect</h3>
+    
+    <div class="form-group">
+      <label for="ui-prompt">Prompt (input.description)</label>
+      <textarea id="ui-prompt" rows="3">A cute girl standing in a council flat flat smiling</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="ui-style">Art Style Template</label>
+      <select id="ui-style">
+        <option value="flux2020">Flux 2020 (a candid phone photo [prompt] This is a mid 2020's era...)</option>
+        <option value="nostyle">No Style (a candid phone photo [prompt] IMG_8026.JPEG)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="ui-resolution">Resolution (input.shape)</label>
+      <select id="ui-resolution">
+        <option value="512x768">Portrait (512x768)</option>
+        <option value="768x768">Square (768x768)</option>
+        <option value="768x512">Landscape (768x512)</option>
+      </select>
+    </div>
+
+    <button id="ui-generate-btn">Request Perchance Generator</button>
+
+    <div class="output-box">
+      <strong>Status / Generated JSON Payload:</strong>
+      <pre id="status-log" class="code-preview">Ready. Press generate to see connection payload...</pre>
+      <img id="output-img" class="image-preview" alt="Generated Result" />
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
