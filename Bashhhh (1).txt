@@ -1,0 +1,104 @@
+generateHTML = {import:t2i-framework-plugin-v2}  // <-- this is a little DIY 'framework' plugin that itself importes the text-to-image plugin and generates the user interface using the settings below
+
+$meta
+  title = New FLUX Machine by STT
+  description = An AI text to image generator with extended controls.
+  image = https://cdn.discordapp.com/attachments/1158523792692351057/1169781491182612571/htzehrztzrjtuh.PNG
+  image = https://files.catbox.moe/realistic_example.jpg
+  image = https://files.catbox.moe/m32lbi.jpg 
+  image = https://files.catbox.moe/5e7tsi.webp
+  image = https://user.uploads.dev/file/baf12e344ccd6f6928ae47faff53cbe9.jpg
+
+settings 
+  pageTitle = 🏝️ New FLUX Machine by STT 🦄
+  pageSubtitle = An AI text to image generator with extended controls.
+  numImages = [Number(input.numImages)]
+  socialFeatures = disabled
+
+  // note: the t2i-framework-plugin makes all user inputs from the `userInputs` list accessible by name as [input.theNameOfTheInput], as shown here:
+  imageOptions // <-- options for the text-to-image plugin that generates the images: https://perchance.org/text-to-image-plugin
+
+    prompt = [input.artStyle.prompt]
+    negativePrompt = [input.artStyle.negative]
+    resolution = [input.shape]
+    guidanceScale = [input.Gscale]
+    seed = [input.seed]
+    InferenceSteps = [input.steps]
+    model = [input.model]
+    sampler = [input.sampler]
+    safety = [input.safety]
+
+  userInputs // you can add more user inputs to this list, and then use them like [input.nameOfInput] in the `prompt`, `negativePrompt`, `artStyle.prompt`, etc.
+
+    scratchpad // Note: the 'remember' option storage is 'based on' this 'scratchpad' name, so if you change that name to something else like 'notepad', people will lose all their saved scratchpad text. But it's safe to change the 'label', below.
+      label = Notepad
+      tip = Just a little notepad for you - doesn't affect your generated images. It 'remembers' the text that you put in it even after you refresh/close this page.\n\nThe text will only be forgotten if you clear your browser's "site data" (cookies, localStorage, etc.) for this particular site.
+      type = paragraph
+numImages
+      label = Number of images
+      type = select
+      remember = true // <-- the selected option will be remembered even if the user refreshes/closes the page
+      options
+        1
+        2
+        3
+        4
+        5
+        6 
+        7
+        8
+        9
+        10
+        11
+        12
+        13
+        14
+        15
+        16
+        17
+        18
+        19
+        20
+        21
+        22
+        23
+        24
+        25
+        26
+        27
+        28 
+        29
+        30
+        31
+        32
+        33
+        34
+        35
+        36
+        37
+        38
+        39
+        40
+        41
+        42
+        43
+        44
+        45
+        46
+        47
+        48
+        49
+        50
+        51
+        52
+        53
+        54
+        55
+        56
+        57
+        58
+        59
+        60
+        61
+        62
+        63
